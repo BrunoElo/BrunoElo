@@ -1,0 +1,1 @@
+//JavaScript external file
