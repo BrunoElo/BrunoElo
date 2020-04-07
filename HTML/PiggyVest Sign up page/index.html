@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - PiggyVest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <a id="logolink" href="https://www.piggyvest.com/"><img class="logo"
+                src="https://res.cloudinary.com/brunoelo/image/upload/v1585840608/PiggyVest%20Sign%20up%20page/piggyvest-logo.0b78a8fa.svg"
+                alt="Piggybank Logo" /></a>
+        <!--Sign up form-->
+        <div class="form-container">
+            <header>
+                <h1>Create a Secure Account</h1>
+                <p>Welcome to the future of Savings & Investments</p>
+            </header>
+            <form>
+                <div class="fill">
+                    <label for>Full Name</label>
+                    <input class="put" name="fullname" type="text" id placeholder="Full Name" value />
+                </div>
+                <div class="fill">
+                    <label for="email">Email Address</label>
+                    <input class="put" name="email" type="text" id="email" placeholder="Email Address" value />
+                </div>
+                <div class="fill">
+                    <label for="phonenumber">Phone Number</label>
+                    <input class="put" name="phonenumber" type="text" id="phonenumber" placeholder="Phone Number"
+                        value />
+                </div>
+                <div class="fill">
+                    <label for="password">Password</label>
+                    <input class="put" name="password" type="text" id="password" placeholder="Password" value />
+                </div>
+                <div class="fill">
+                    <label for="referrer">Referrer Phone or Promo Code (Optional)</label>
+                    <input class="put" name="promocode" type="text" id="referrer" placeholder="Referrer Phone or Code"
+                        value />
+                </div>
+                <div class="fill">
+                    <label for="select">How Did You Hear About Us? (Optional)</label>
+                    <input id="select" type="text" list="referral" placeholder="Click To Select" name="" />
+                    <div class="dlist">
+                        <datalist id="referral">
+                            <option value="Click To Select"></option>
+                            <option value="Facebook"></option>
+                            <option value="Twitter"></option>
+                            <option value="Instagram"></option>
+                            <option value="Friend/Family/Coworker Referral"></option>
+                            <option value="Google search"></option>
+                            <option value="Google playstore"></option>
+                            <option value="Online Blog"></option>
+                            <option value="Local Newspaper"></option>
+                            <option value="At an event"></option>
+                            <option value="Other"></option>
+                        </datalist>
+                    </div>
+                </div>
+                <div>
+                    <button id="signup" type="submit">Create Account</button>
+                </div>
+            </form>
+        </div>
+        <!--End of form-->
+        <a id="loginlink" href="https://dashboard.piggyvest.com/login">Already have an account? Log In</a>
+    </div>
+</body>
+<!--<i></i>-->
+
+</html>

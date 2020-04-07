@@ -11,7 +11,7 @@ console.log(courses);
 console.log("Number of courses is " + courses.length + " which is an odd number.")
 
 //find and display all odd numbers from 1 to 200 (inclusive)
-for (i = 0; i < 200; i++) {
+for (let i = 0; i < 200; i++) {
     if (i % 2 != 0) {
         oddnumbers.push(i);
     }
