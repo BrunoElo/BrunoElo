@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Quiz App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <!--first page-->
+    <div id="quiz-fp" class="quiz-p">
+        <h2>Welcome to the puntastic programmers quiz</h2>
+        <p>Are you as smart as you think? &#128527;</p>
+        <button id="start-btn" class="btn">Click to start</button>
+    </div>
+    <!--end of first page-->
+    <!--quiz start-->
+    <div id="qst-cont" class="qst-container hide">
+        <p id="score" class="result">Your Score:</p>
+        <h2 id="qsts" class="qst">Questions</h2>
+        <div id="opt-cont" class="opt-container">
+            <button class="btn" id="a" onclick="checkAnswer(this)">1</button>
+            <button class="btn" id="b" onclick="checkAnswer(this)">2</button>
+            <button class="btn" id="c" onclick="checkAnswer(this)">3</button>
+            <button class="btn" id="d" onclick="checkAnswer(this)">4</button>
+        </div>
+        <button id="nxt-btn" class="next-btn btn">Next</button>
+    </div>
+    <!--quiz end-->
+    <!--quiz result-->
+    <div id="quiz-lp" class="quiz-p hide">
+        <h2>Hurray!!! &#128523;</h2>
+        <p class="result">Your Score:</p>
+    </div>
+</body>
+
+</html>
