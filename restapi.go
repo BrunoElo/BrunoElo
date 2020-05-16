@@ -1,4 +1,4 @@
-// A rest api with mysql and mux router
+// A rest api with mysql and mux router (tests were done with curl)
 package main
 
 import (
@@ -120,12 +120,13 @@ func deleteBooks(w http.ResponseWriter, r *http.Request) {
 // Middleware function to authenticate required input
 func required(input http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("request received")
+		fmt.Println("request received", r.URL.Path)
 		input.ServeHTTP(w, r)
 	}
 }
 
 func main() {
+
 	// Establishing connection to database
 	db, err = sql.Open("mysql", "admin:bo@tcp(127.0.0.1:3306)/bookdb")
 
@@ -153,10 +154,10 @@ func main() {
 	router := mux.NewRouter()
 
 	// Creating endpoints
-	router.HandleFunc("/api/v1/books", getBooks).Methods("GET")
+	router.HandleFunc("/api/v1/books", required(getBooks)).Methods("GET")
 	router.HandleFunc("/api/v1/books", required(makeBooks)).Methods("POST")
-	router.HandleFunc("/api/v1/books/{id}", updateBooks).Methods("PUT")
-	router.HandleFunc("/api/v1/books/{id}", deleteBooks).Methods("DELETE")
+	router.HandleFunc("/api/v1/books/{id}", required(updateBooks)).Methods("PUT")
+	router.HandleFunc("/api/v1/books/{id}", required(deleteBooks)).Methods("DELETE")
 
 	fmt.Println("server listening on port 8000")
 	// Creates server on port 8000 with mux router
